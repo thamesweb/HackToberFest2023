@@ -3,14 +3,14 @@
 Your PR will be merge if your changes are Attractive.<br>
 You can contribute to this repository by Adding Your Projects, any Excecutable Programs or just make another folder at appropriate position and add there whatever you want (must be related to programming and Projects).
 <br>
----
+
 Raise an issue so that I can assign you then make PR.
 
 ## Contribution Guidelines:
 Thank you for your interest in contributing to our Repo! Pull requests are Welcome.
 
 To start contributing, follow the below guidelines:<br><br>
-**1.** **Star** and **Fork** [this](https://github.com/ss020182003/homeworkout) repository.
+**1.** **Star** and **Fork** [this](https://github.com/ss020182003/homeworkout) repository.<br>
 **2.**  Clone your forked copy of the project.
 
 ```
