@@ -1,8 +1,10 @@
 # Home Workout
 
-Contribute to this repository by making this website more attractive.<br>
-You can also add your own Web Development Projects.<br>
 Your PR will be merge if your changes are Attractive.<br>
+You can contribute to this repository by Adding Your Projects, any Excecutable Programs or just make another folder at appropriate position and add there whatever you want (must be related to programming and Projects).
+<br>
+---
+Raise an issue so that I can assign you then make PR.
 
 ## Contribution Guidelines:
 Thank you for your interest in contributing to our Repo! Pull requests are Welcome.
