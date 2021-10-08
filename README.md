@@ -9,11 +9,11 @@ Raise an issue so that I can assign you then make PR.
 Thank you for your interest in contributing to our Repo! Pull requests are Welcome.
 
 To start contributing, follow the below guidelines:<br><br>
-**1.** **Star** and **Fork** [this](https://github.com/ss020182003/homeworkout) repository.<br>
+**1.** **Star** and **Fork** [this](https://github.com/ss020182003/HackToberFest2021) repository.<br>
 **2.**  Clone your forked copy of the project.
 
 ```
-git clone https://github.com/<your_user_name>/homeworkout.git
+git clone https://github.com/<your_user_name>/HackToberFest2021.git
 ```
 
 **3.** Navigate to the project directory :file_folder: .
@@ -25,7 +25,7 @@ cd Programming-Basics
 **4.** Add a reference(remote) to the original repository.
 
 ```
-git remote add upstream https://github.com/ss020182003/homeworkout.git 
+git remote add upstream https://github.com/ss020182003/HackToberFest2021.git 
 ```
 
 **5.** Check the remotes for this repository.
