@@ -1,0 +1,37 @@
+Diamond of Stars
+Print the following pattern for the given number of rows.
+Note: N is always odd.
+Pattern for N = 8
+
+    *    
+   ***   
+  *****  
+ ******* 
+*********
+  *****  
+   ***   
+    *
+
+
+Diamond of StarThe dots represent spaces.
+Input format :
+N (Total no. of rows and can only be odd)
+
+Output format :
+Pattern in N lines
+
+Constraints :
+1 <= N <= 49
+
+
+
+
+8
+    *    
+   ***   
+  *****  
+ ******* 
+*********
+  *****  
+   ***   
+    *
