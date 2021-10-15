@@ -1,5 +1,5 @@
 #include<iostream>
- using namespace std;
+using namespace std;
 
  void Merge(int arr[],int l,int mid,int r)
  {
@@ -60,10 +60,17 @@
 
  int main()
  {
- 	int arr[]={5,4,3,2,1};
- 	mergesort(arr,0,4);
+ 	int n;
+  cin>>n;
+  int arr[n];
+  for(int i=0;i<n;i++)
+  {
+   cin>>arr[i];
+  }
+  
+ 	mergesort(arr,0,n);
 
- 	for(int i=0;i<5;i++)
+ 	for(int i=0;i<n;i++)
  	{
  		cout<<arr[i]<<" ";
  	}
