@@ -1,0 +1,122 @@
+* ,*::after ,*::before
+{
+box-sizing: border-box;
+font-family: Gotham Rounded ,sans-serif;
+}
+
+body{
+    background: linear-gradient(to right, rgb(32, 212, 188) ,rgb(36, 228, 123));
+display: flex;
+justify-content: center;
+margin-top: 50px;
+overflow: hidden;
+
+
+}
+
+.clock{
+    height: 500px;
+    width: 500px;
+    border:3px solid black;
+    
+    background: rgb(220, 223, 192);
+    border-radius: 50%;
+    position: relative;
+}
+
+.clock .number{
+    --rotation : 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+  font-size: 50px;
+
+}
+
+.clock .number1{
+    --rotation :30deg;
+}
+.clock .number2{
+    --rotation :60deg;
+}.clock .number3{
+    --rotation :90deg;
+}.clock .number4{
+    --rotation :120deg;
+}.clock .number5{
+    --rotation :150deg;
+}.clock .number6{
+    --rotation :180deg;
+}.clock .number7{
+    --rotation :210deg;
+}.clock .number8{
+    --rotation :240deg;
+}.clock .number9{
+    --rotation :270deg;
+}.clock .number10{
+    --rotation :300deg;
+}.clock .number11{
+    --rotation :330deg;
+}.clock .number12{
+    --rotation :360deg;
+}
+
+
+.clock .hand
+{--rotation : 0;
+    position: absolute;
+    bottom: 50%;
+    left:50%;
+
+    border: 1px solid white;
+    border-top-left-radius: 12px ;
+    border-top-right-radius: 12px ;
+
+    background-color: black;
+    transform-origin: bottom;
+transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+z-index: 10;
+}
+
+.clock::after{
+    content: "(Rj)";
+    color: rgb(48, 184, 194);
+   font-size: 20px;
+
+    text-align:center;
+    position: absolute;
+    background-color: black;
+    justify-content: center;
+    z-index: 25;
+    width: 40px ;
+    height: 40px;
+    bottom: 45%;
+    left:50%;
+    transform: translate(-50%);
+border-radius:50% ;
+}
+
+
+
+
+.hand.hour
+{
+    width: 16px;
+    height: 30%;
+
+   
+}
+.hand.minute
+{
+    width: 12px;
+    height: 45%;
+    background-color: red;
+  
+    
+}
+
+.hand.second{
+    width: 10px;
+    height: 35%;
+}
