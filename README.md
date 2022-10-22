@@ -1,4 +1,4 @@
-# Hacktober Fest 2021
+# Hacktober Fest 2022
 
 You can contribute to this repository by Adding Your Projects, any Executable Programs or just make another folder at appropriate position and add there whatever you want (must be related to programming and Projects).
 <br>
@@ -72,8 +72,6 @@ git push -u origin <your_branch_name>
 
 **14.** Click on `Create Pull Request`.
 
-
-**15.** Woohoo! You have made a PR to the Programming-Basics :boom: . Wait for your submission to be accepted and your PR to be merged.
 
 **Thank you for your interest in contributing to our Repo!🏼**
 
