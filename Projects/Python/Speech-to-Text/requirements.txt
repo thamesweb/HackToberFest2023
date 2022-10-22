@@ -1,0 +1,4 @@
+SpeechRecognition pydub
+sklearn
+numpy
+pandas
