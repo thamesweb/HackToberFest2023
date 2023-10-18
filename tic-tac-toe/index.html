@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic-Tac-Toe</title>
+    <style>
+       
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-gap: 5px;
+            justify-content: center;
+            align-content: center;
+        }
+        h1 {
+             position: relative;
+             left: 600px;
+            color: green;
+           font-style: italic;
+        }
+        #message {
+            text-align: center;
+           
+        }
+        button {
+            position: relative;
+             left: 600px;
+            color: green;
+           font-style: italic;
+           padding: 10px 40px;
+        }
+
+        .cell {
+            width: 100px;
+            height: 100px;
+            font-size: 2em;
+            text-align: center;
+            border: 1px solid #333;
+            cursor: pointer;
+        }
+
+        .cell:hover {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tic-Tac-Toe</h1>
+    <div class="container" id="board">
+        <div class="cell" onclick="makeMove(0, 0)"></div>
+        <div class="cell" onclick="makeMove(0, 1)"></div>
+        <div class="cell" onclick="makeMove(0, 2)"></div>
+        <div class="cell" onclick="makeMove(1, 0)"></div>
+        <div class="cell" onclick="makeMove(1, 1)"></div>
+        <div class="cell" onclick="makeMove(1, 2)"></div>
+        <div class="cell" onclick="makeMove(2, 0)"></div>
+        <div class="cell" onclick="makeMove(2, 1)"></div>
+        <div class="cell" onclick="makeMove(2, 2)"></div>
+    </div>
+    <p id="message"></p>
+    <button onclick="resetBoard()">Reset</button>
+
+    <script>
+        let currentPlayer = 'X';
+        let board = [
+            ['', '', ''],
+            ['', '', ''],
+            ['', '', '']
+        ];
+        let gameOver = false;
+
+        function makeMove(row, col) {
+            if (board[row][col] === '' && !gameOver) {
+                board[row][col] = currentPlayer;
+                document.getElementById('board').children[row * 3 + col].textContent = currentPlayer;
+                checkWinner();
+                currentPlayer = (currentPlayer === 'X') ? 'O' : 'X';
+            }
+        }
+
+        function checkWinner() {
+            const winPatterns = [
+                [[0, 0], [0, 1], [0, 2]],
+                [[1, 0], [1, 1], [1, 2]],
+                [[2, 0], [2, 1], [2, 2]],
+                [[0, 0], [1, 0], [2, 0]],
+                [[0, 1], [1, 1], [2, 1]],
+                [[0, 2], [1, 2], [2, 2]],
+                [[0, 0], [1, 1], [2, 2]],
+                [[0, 2], [1, 1], [2, 0]]
+            ];
+
+            for (const pattern of winPatterns) {
+                const [a, b, c] = pattern;
+                if (board[a[0]][a[1]] && board[a[0]][a[1]] === board[b[0]][b[1]] && board[a[0]][a[1]] === board[c[0]][c[1]]) {
+                    document.getElementById('message').textContent = `${currentPlayer} wins!`;
+                    gameOver = true;
+                }
+            }
+        }
+
+        function resetBoard() {
+            board = [
+                ['', '', ''],
+                ['', '', ''],
+                ['', '', '']
+            ];
+            currentPlayer = 'X';
+            gameOver = false;
+            for (const cell of document.getElementById('board').children) {
+                cell.textContent = '';
+            }
+            document.getElementById('message').textContent = '';
+        }
+    </script>
+</body>
+</html>
