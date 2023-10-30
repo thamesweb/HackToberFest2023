@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 980px)" href="phone.css">
+
+<style>
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(201, 164, 231); */
+    background: linear-gradient(rgba(238, 3, 3, 0.744), #0a7ff4f6) no-repeat;
+    height: 100vh;
+}
+
+#container {
+    background-color: #2195f3ea;
+    border: 2px solid rgb(57, 31, 31);
+    border-radius: 12px;
+    height: 44%;
+    width: 84%;
+    padding: 16px;
+    box-shadow: -4px -2px 10px 2px rgb(40, 31, 44);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 16px;
+    margin: 4% 4%;
+    padding: 4% 8%;
+}
+
+#container h3 {
+    text-align: center;
+    padding: 4px;
+    margin: 6px;
+    font-size: 1.94rem;
+}
+
+#container input {
+    padding: 6px;
+    margin: 4px;
+    font-size: 1.1rem;
+    border-radius: 4px;
+}
+
+/* --------------------Phone.css--------------------- */
+@media only screen and (max-width: 600px) {
+
+.row{
+    margin: 6% 6%;
+    padding: 6% 8%;
+    overflow: hidden;
+}
+#container {
+    border:none;
+    height: 58%;
+    width: 92%;
+    padding: 8px;
+    box-shadow: -4px -2px 10px 2px rgb(40, 31, 44);
+}
+
+#container h3 {
+    text-align: center;
+    padding: 4px;
+    margin: 4px;
+    font-size: 1.7rem;
+}
+
+#container input {
+    padding: 5px;
+    margin: 4px;
+    font-size: 1.04rem;
+    border-radius: 4px;
+}
+
+}
+</style>
+</head>
+<body>
+    <div id="container">
+        <h3>Temperature Converter</h3>
+        <div class="row">
+            <div class="celsius box">
+                <!-- <label>Celsius:-</label> -->
+                <input type="number" id="celsius" placeholder="Celsius">
+            </div>
+            
+            <div class="fahrenheit box">
+                <!-- <label>Fahrenheit:-</label> -->
+                <input type="number" id="fahrenheit" placeholder="Fahrenheit">
+            </div>
+            
+            <div class="kelvin box">
+                <!-- <label>Kelvin:-</label> -->
+                <input type="number" id="kelvin" placeholder="Kelvin">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let celsius =
+            document.getElementById('celsius');
+        let fahrenheit =
+            document.getElementById('fahrenheit');
+        let kelvin =
+            document.getElementById('kelvin');
+        celsius.oninput = function () {
+            let f = (parseFloat(celsius.value) * 9) / 5 + 32;
+            fahrenheit.value = parseFloat(f.toFixed(2));
+
+            let k = (parseFloat(celsius.value) + 273.15);
+            kelvin.value = parseFloat(k.toFixed(2));
+        }
+        fahrenheit.oninput = function () {
+            let c = ((parseFloat(
+                fahrenheit.value) - 32) * 5) / 9;
+            celsius.value = parseFloat(c.toFixed(2));
+
+            let k = (parseFloat(
+                fahrenheit.value) - 32) * 5 / 9 + 273.15;
+            kelvin.value = parseFloat(k.toFixed(2));
+        }
+        kelvin.oninput = function () {
+            let f = (parseFloat(
+                kelvin.value) - 273.15) * 9 / 5 + 32;
+            fahrenheit.value = parseFloat(f.toFixed(2));
+
+            let c = (parseFloat(kelvin.value) - 273.15);
+            celsius.value = parseFloat(c.toFixed(2));
+        }
+    </script>
+</body>
+
+</html>
